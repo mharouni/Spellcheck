@@ -14,6 +14,9 @@ Node * newnode(char word [])
 {
 	Node *n;
 	n=(Node*)malloc(sizeof(Node));
+	n->word = word;
+	n->left = NULL;
+	n->right= NULL;
 	return n;
 }
 void initialiseBST(BST * b)
@@ -50,5 +53,21 @@ Node * search (Node * root, char word[])
 		printf("Error: In Search BST");
 		return NULL;
 	}
+	return NULL;
+}
+Node * insert (Node * root, char word [])
+{
+	Node *n =root;
+	if(n == NULL)
+	{
+		return newnode(word);
+	}
+	else if (strcmp(n->word,word) == 1)
+				n->left = insert(n->left,word);
+	else if (strcmp(n->word, word ) == -1)
+				n->right = insert(n->right, word);
+	return n ;
+	
+		
 	
 }

@@ -13,7 +13,7 @@
 
 typedef struct
 {
-	char word[27];
+	char * word;
 	struct Node * left, *right;
 } Node;
 typedef struct {
@@ -23,7 +23,7 @@ Node * newnode(char []);
 Node * Search(Node *root,char word[]);
 void initializeBST(BST *);
 Node * GetParent(Node * root, char word[]);
-void insert(
+Node * insert(Node *,  char word []);
 
 
 
