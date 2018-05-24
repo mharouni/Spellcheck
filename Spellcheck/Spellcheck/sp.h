@@ -10,12 +10,13 @@
 #define sp_h
 
 #include <stdio.h>
-
-typedef struct
+typedef struct Node  Node;
+struct Node
 {
 	char * word;
 	struct Node * left, *right;
-} Node;
+	int height;
+};
 typedef struct {
 	Node * root;
 } BST;
@@ -24,8 +25,8 @@ Node * Search(Node *root,char word[]);
 void initializeBST(BST *);
 Node * GetParent(Node * root, char word[]);
 Node * insert(Node *,  char word []);
-
-
-
-
+int height( Node *N);
+Node *leftRotate(Node *x);
+Node *rightRotate(Node *y);
+int getBalance(Node *N);
 #endif /* sp_h */

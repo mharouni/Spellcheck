@@ -7,9 +7,17 @@
 //
 
 #include <stdio.h>
+#include "sp.h"
+#include "sp.c"
 
 int main(int argc, const char * argv[]) {
-	// insert code here...
+	BST * b ;
+	Node *n;
+	insert(b->root, "a");
+	insert(b->root, "b");
+	insert(b->root, "c");
+	insert(b->root, "d");
+	
 	printf("Hello, World!\n");
 	return 0;
 }
